@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    tools:context="com.example.whatsapp.waveview.MainActivity">
+
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekbar"
+        android:max="100"
+
+
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="21dp" />
+
+    <com.john.waveview.WaveView
+        android:id="@+id/waveView"
+        android:background="#fE702Ebc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:blow_wave_color="@android:color/white"
+        app:above_wave_color="@android:color/white"
+        app:wave_height="large"
+        app:wave_length="large"
+        android:layout_above="@id/seekbar"
+        app:wave_hz="fast" />
+
+</RelativeLayout>
