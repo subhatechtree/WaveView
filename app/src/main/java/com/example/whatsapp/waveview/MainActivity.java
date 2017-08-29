@@ -6,6 +6,10 @@ import android.widget.SeekBar;
 
 import com.john.waveview.WaveView;
 
+import java.sql.Time;
+import java.util.Timer;
+import java.util.TimerTask;
+
 public class MainActivity extends AppCompatActivity {
 
 
@@ -13,13 +17,15 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        final WaveView waveView= (WaveView) findViewById(R.id.waveView);
-        SeekBar seekBar= (SeekBar) findViewById(R.id.seekbar);
+        final WaveView waveView = (WaveView) findViewById(R.id.waveView);
+        SeekBar seekBar = (SeekBar) findViewById(R.id.seekbar);
         waveView.setProgress(seekBar.getProgress());
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
-             waveView.setProgress(i);
+                waveView.setProgress(i);
+
+
             }
 
             @Override
@@ -32,5 +38,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+
     }
 }

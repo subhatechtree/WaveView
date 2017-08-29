@@ -8,27 +8,25 @@
     tools:context="com.example.whatsapp.waveview.MainActivity">
 
     <SeekBar
+        android:id="@+id/seekbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/seekbar"
-        android:max="100"
-
-
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginBottom="21dp" />
+        android:layout_marginBottom="21dp"
+        android:max="100" />
 
     <com.john.waveview.WaveView
         android:id="@+id/waveView"
-        android:background="#fE702Ebc"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:blow_wave_color="@android:color/white"
-        app:above_wave_color="@android:color/white"
-        app:wave_height="large"
-        app:wave_length="large"
         android:layout_above="@id/seekbar"
-        app:wave_hz="fast" />
+        android:background="#fE702Ebc"
+        app:above_wave_color="@android:color/white"
+        app:blow_wave_color="@android:color/holo_blue_dark"
+        app:wave_height="large"
+        app:wave_hz="fast"
+        app:wave_length="large" />
 
 </RelativeLayout>
